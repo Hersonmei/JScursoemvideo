@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DETRAN</title>
+    <title>Nacionalidade</title>
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
-    <input type="button" value="Verificar" onclick="calcular()">
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    Qual país você nasceu? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="avaliar()">
     <div id="res">
 
     </div>
     <script>
         
 
-        function calcular(){
-            var txtv = document.getElementById('txtvel')
+        function avaliar(){
+            var txtn = document.getElementById('txtnac')
             var res = document.getElementById('res')
-            var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+            var nacl = String(txtn.valeu)
+            res.innerHTML = `<p>Você nasceu no <strong>${nacl}</strong></p>`
+            
+            
+            
             if (vel > 60){
                 res.innerHTML += `<p>Você está <strong>multado</strong> por excesso de velocidade</p>`
             }
