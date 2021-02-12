@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Brasileiro ou Estrangeiro?</h1>
-    Qual país você nasceu? <input type="text" name="txtnac" id="txtnac">
+    Qual país você nasceu? <input type="text" name="txtnac" id="txtnacc">
     <input type="button" value="Verificar" onclick="avaliar()">
     <div id="res">
 
@@ -17,17 +17,18 @@
         
 
         function avaliar(){
-            var txtn = document.getElementById('txtnac')
+            var txtn = document.getElementById('txtnacc')
             var res = document.getElementById('res')
-            var nacl = String(txtn.valeu)
-            res.innerHTML = `<p>Você nasceu no <strong>${nacl}</strong></p>`
-            
-            
-            
-            if (vel > 60){
-                res.innerHTML += `<p>Você está <strong>multado</strong> por excesso de velocidade</p>`
+            var nacl = String(txtn.value)
+            res.innerHTML = `<p>Você nasceu no <strong>${nacl}</strong></p>.`
+            if (nacl == 'Brasil'){
+                res.innerHTML = '<p>Então você é <strong>Brasileiro</strong></p>'
             }
-            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+            else{
+                res.innerHTML = '<p>Então você é <strong>Estrangeiro</strong></p>'
+            }
+            
+            
         }
     </script>
 </body>
